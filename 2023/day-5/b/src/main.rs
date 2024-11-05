@@ -1,13 +1,37 @@
-use std::{fs, u64};
+use std::{collections::BTreeSet, fs, u64};
 
-type Map = Vec<(u64,u64,u64)>;
+#[derive(PartialEq, Eq)]
+struct Conversion{
+    destination_range_start: u64,
+    source_range_start: u64,
+    range_length: u64
+}
+
+impl PartialOrd for Conversion {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        self.source_range_start.partial_cmp(&other.source_range_start)
+    }
+}
+
+impl Ord for Conversion {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.source_range_start.cmp(&other.source_range_start)
+    }
+}
+
+struct Range{
+    start: u64,
+    length: u64,
+}
+
+type Map = BTreeSet<Conversion>;
 
 fn main() {
     let input: String = fs::read_to_string("../input.txt").unwrap();
     let input: Vec<&str> = input.split("\n\n").collect();
     let seeds_str: &str = input[0];
     let map_strs: Vec<&str> = input[1..input.len()].to_vec();
-    let seeds: Vec<(u64,u64)> = seeds_str
+    let seed_ranges: Vec<Range> = seeds_str
         .split(":")
         .nth(1)
         .unwrap()
@@ -16,70 +40,75 @@ fn main() {
         .map(|n| n.parse::<u64>().unwrap())
         .collect::<Vec<u64>>()
         .chunks(2)
-        .map(|chunk| (chunk[0],chunk[1]))
+        .map(|chunk| Range{start: chunk[0], length: chunk[1]})
         .collect();
-    let mut maps: Vec<Map> = Vec::new();
-    for map_str in map_strs {
-        maps.push(str_to_map(map_str));
-    }
+    let maps: Vec<Map> = map_strs
+        .iter()
+        .map(|map_str|{
+            map_str
+                .split(":")
+                .nth(1)
+                .unwrap()
+                .trim()
+                .split("\n")
+                .map(|line| {
+                    let numbers: Vec<u64> = line
+                        .split(" ")
+                        .map(|n| n.parse::<u64>().unwrap())
+                        .collect();
+                    Conversion{
+                        destination_range_start: numbers[0],
+                        source_range_start: numbers[1],
+                        range_length: numbers[2],
+                    }
+                }).collect()
+        }).collect();
+
     let mut lowest: Option<u64> = None;
-    for (start, range) in seeds {
-        for seed in start..start+range {
-            let location = seed.get_location(&maps);
-            if let Some(v) = lowest {
-                if location < v {
-                    lowest = Some(location);
-                }
-            }else {
-                lowest = Some(location);
-            }
+    for Range{start, length} in seed_ranges {
+        let mut seed_iter = start..start+length;
+        let mut possible_skips: usize = 0;
+        while let Some(seed) = seed_iter.nth(possible_skips){
+            let (location, skips) = get_location_and_skips(seed, &maps);
+            lowest = match lowest{
+                Some(current_value) if location >= current_value => lowest,
+                _ => Some(location),
+            };
+            possible_skips = skips.try_into().unwrap();
         }
+
     }
     println!("lowest location: {:?}", lowest);
 }
 
-fn str_to_map(map_str: &str) -> Map{
-    map_str
-        .split(":")
-        .nth(1)
-        .unwrap()
-        .trim()
-        .split("\n")
-        .map(|line| {
-            let numbers: Vec<u64> = line
-                .split(" ")
-                .map(|n| n.parse::<u64>().unwrap())
-                .collect();
-            (numbers[0], numbers[1], numbers[2])
-        }).collect()
-}
-
-impl N for u64 {
-    fn is_in_range(&self, start: u64, range: u64) -> bool{
-        *self >= start && *self < start+range
-    }
-    fn get_destination(&self, map: &Map) -> u64{
-        let mut destination = *self;
-        for (d,s,r) in map {
-            if !self.is_in_range(*s, *r) {
-                continue;
-            }
-            destination = *self-s+d;
+fn process_map(source: u64, map: &Map) -> (u64, u64){
+    let mut next_conversion_change: u64 = u64::MAX;
+    let mut destination = source;
+    for Conversion{destination_range_start, source_range_start, range_length} in map {
+        if source < *source_range_start {
+            next_conversion_change = *source_range_start;
             break;
         }
-        destination
-    }
-    fn get_location(&self, maps: &Vec<Map>) -> u64{
-        let mut tmp_dest = *self;
-        for m in maps {
-            tmp_dest = tmp_dest.get_destination(m);
+        if source < *source_range_start + *range_length {
+            destination = source - source_range_start + destination_range_start;
+            next_conversion_change = source_range_start + range_length;
+            break;
         }
-        tmp_dest
     }
+    let skips = next_conversion_change - source - 1;
+    (destination, skips)
 }
 
-trait N {
-    fn is_in_range(&self, start: u64, range: u64) -> bool;
-    fn get_destination(&self, map: &Map) -> u64;
-    fn get_location(&self, maps: &Vec<Map>) -> u64;
+fn get_location_and_skips(seed: u64, maps: &Vec<Map>) -> (u64, u64){
+    let mut current_pos = seed;
+    let mut max_skips = None;
+    for map in maps {
+        let (next_pos, skips) = process_map(current_pos, map);
+        current_pos = next_pos;
+        max_skips = match max_skips {
+            Some(current_value) if skips >= current_value => max_skips,
+            _ => Some(skips),
+        }
+    }
+    (current_pos, max_skips.unwrap_or(0))
 }
