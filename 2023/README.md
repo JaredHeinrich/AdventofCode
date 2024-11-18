@@ -17,34 +17,34 @@
 - [x] [Day 9a](https://adventofcode.com/2023/day/9): [Rust](Rust/day-09/a)
 - [x] [Day 9b](https://adventofcode.com/2023/day/9): [Rust](Rust/day-09/b)
 - [x] [Day 10a](https://adventofcode.com/2023/day/10): [Rust](Rust/day-10/a)
-- [ ] [Day 10b](https://adventofcode.com/2023/day/10): [Rust](Rust/day-10/b)
+- [ ] [Day 10b](https://adventofcode.com/2023/day/10): [Rust](Rust/day-11/b)
 - [x] [Day 11a](https://adventofcode.com/2023/day/11): [Rust](Rust/day-11/a)
 - [x] [Day 11b](https://adventofcode.com/2023/day/11): [Rust](Rust/day-11/b)
-- [ ] [Day 12a](https://adventofcode.com/2023/day/12): [Rust](Rust/day-12/a)
-- [ ] [Day 12b](https://adventofcode.com/2023/day/12): [Rust](Rust/day-12/b)
-- [ ] [Day 13a](https://adventofcode.com/2023/day/13): [Rust](Rust/day-13/a)
-- [ ] [Day 13b](https://adventofcode.com/2023/day/13): [Rust](Rust/day-13/b)
-- [ ] [Day 14a](https://adventofcode.com/2023/day/14): [Rust](Rust/day-14/a)
-- [ ] [Day 14b](https://adventofcode.com/2023/day/14): [Rust](Rust/day-14/b)
-- [ ] [Day 15a](https://adventofcode.com/2023/day/15): [Rust](Rust/day-15/a)
-- [ ] [Day 15b](https://adventofcode.com/2023/day/15): [Rust](Rust/day-15/b)
-- [ ] [Day 16a](https://adventofcode.com/2023/day/16): [Rust](Rust/day-16/a)
-- [ ] [Day 16b](https://adventofcode.com/2023/day/16): [Rust](Rust/day-16/b)
-- [ ] [Day 17a](https://adventofcode.com/2023/day/17): [Rust](Rust/day-17/a)
-- [ ] [Day 17b](https://adventofcode.com/2023/day/17): [Rust](Rust/day-17/b)
-- [ ] [Day 18a](https://adventofcode.com/2023/day/18): [Rust](Rust/day-18/a)
-- [ ] [Day 18b](https://adventofcode.com/2023/day/18): [Rust](Rust/day-18/b)
-- [ ] [Day 19a](https://adventofcode.com/2023/day/19): [Rust](Rust/day-19/a)
-- [ ] [Day 19b](https://adventofcode.com/2023/day/19): [Rust](Rust/day-19/b)
-- [ ] [Day 20a](https://adventofcode.com/2023/day/20): [Rust](Rust/day-20/a)
-- [ ] [Day 20b](https://adventofcode.com/2023/day/20): [Rust](Rust/day-20/b)
-- [ ] [Day 21a](https://adventofcode.com/2023/day/21): [Rust](Rust/day-21/a)
-- [ ] [Day 21b](https://adventofcode.com/2023/day/21): [Rust](Rust/day-21/b)
-- [ ] [Day 22a](https://adventofcode.com/2023/day/22): [Rust](Rust/day-22/a)
-- [ ] [Day 22b](https://adventofcode.com/2023/day/22): [Rust](Rust/day-22/b)
-- [ ] [Day 23a](https://adventofcode.com/2023/day/23): [Rust](Rust/day-23/a)
-- [ ] [Day 23b](https://adventofcode.com/2023/day/23): [Rust](Rust/day-23/b)
-- [ ] [Day 24a](https://adventofcode.com/2023/day/24): [Rust](Rust/day-24/a)
-- [ ] [Day 24b](https://adventofcode.com/2023/day/24): [Rust](Rust/day-24/b)
-- [ ] [Day 25a](https://adventofcode.com/2023/day/25): [Rust](Rust/day-25/a)
-- [ ] [Day 25b](https://adventofcode.com/2023/day/25): [Rust](Rust/day-25/b)
+- [ ] [Day 12a](https://adventofcode.com/2023/day/12):
+- [ ] [Day 12b](https://adventofcode.com/2023/day/12):
+- [ ] [Day 13a](https://adventofcode.com/2023/day/13):
+- [ ] [Day 13b](https://adventofcode.com/2023/day/13):
+- [ ] [Day 14a](https://adventofcode.com/2023/day/14):
+- [ ] [Day 14b](https://adventofcode.com/2023/day/14):
+- [ ] [Day 15a](https://adventofcode.com/2023/day/15):
+- [ ] [Day 15b](https://adventofcode.com/2023/day/15):
+- [ ] [Day 16a](https://adventofcode.com/2023/day/16):
+- [ ] [Day 16b](https://adventofcode.com/2023/day/16):
+- [ ] [Day 17a](https://adventofcode.com/2023/day/17):
+- [ ] [Day 17b](https://adventofcode.com/2023/day/17):
+- [ ] [Day 18a](https://adventofcode.com/2023/day/18):
+- [ ] [Day 18b](https://adventofcode.com/2023/day/18):
+- [ ] [Day 19a](https://adventofcode.com/2023/day/19):
+- [ ] [Day 19b](https://adventofcode.com/2023/day/19):
+- [ ] [Day 20a](https://adventofcode.com/2023/day/20):
+- [ ] [Day 20b](https://adventofcode.com/2023/day/20):
+- [ ] [Day 21a](https://adventofcode.com/2023/day/21):
+- [ ] [Day 21b](https://adventofcode.com/2023/day/21):
+- [ ] [Day 22a](https://adventofcode.com/2023/day/22):
+- [ ] [Day 22b](https://adventofcode.com/2023/day/22):
+- [ ] [Day 23a](https://adventofcode.com/2023/day/23):
+- [ ] [Day 23b](https://adventofcode.com/2023/day/23):
+- [ ] [Day 24a](https://adventofcode.com/2023/day/24):
+- [ ] [Day 24b](https://adventofcode.com/2023/day/24):
+- [ ] [Day 25a](https://adventofcode.com/2023/day/25):
+- [ ] [Day 25b](https://adventofcode.com/2023/day/25):
