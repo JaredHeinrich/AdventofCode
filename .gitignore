@@ -1,3 +1,6 @@
 **/target/
+main
+main.hi
+main.o
 input.txt
 testinput.txt
