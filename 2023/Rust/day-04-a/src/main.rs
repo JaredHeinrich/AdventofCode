@@ -1,7 +1,7 @@
 use std::{collections::HashSet, fs, u32};
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-04.txt").unwrap();
     let cards: Vec<(HashSet<u32>, HashSet<u32>)> = input.lines().map(|card|{
         let card: &str = card.split(": ").nth(1).unwrap();
         let card: Vec<&str> = card.split("|").collect();

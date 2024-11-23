@@ -1,6 +1,6 @@
 use std::{fs, process::exit, collections::HashMap};
 fn main() {
-    let input = match fs::read_to_string("../input.txt")
+    let input = match fs::read_to_string("../../inputs/input-03.txt")
     {
         Ok(v) => v,
         Err(_) => {

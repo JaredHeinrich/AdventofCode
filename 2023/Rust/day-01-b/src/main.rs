@@ -11,7 +11,7 @@ fn main() {
         ("eight", "8"),
         ("nine", "9"),
     ];
-    let mut input = match fs::read_to_string("../input.txt") {
+    let mut input = match fs::read_to_string("../../inputs/input-01.txt") {
         Ok(value) => value,
         Err(_) => String::from("error"),
     };

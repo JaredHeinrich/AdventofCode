@@ -2,7 +2,7 @@ use core::str;
 use std::{collections::BTreeSet, fs, usize};
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-11.txt").unwrap();
     let galaxy = Galaxy::new(&input);
     let mut distance_sum = 0;
     for a in 0..galaxy.stars.len(){

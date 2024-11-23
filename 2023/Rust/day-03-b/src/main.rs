@@ -1,6 +1,6 @@
 use std::{fs, isize, process::exit, u32, usize};
 fn main() {
-    let calc = Calculator::new("../input.txt");
+    let calc = Calculator::new("../../inputs/input-03.txt");
     println!("result: {}", calc.calculate());
 }
 

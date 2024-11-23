@@ -3,7 +3,7 @@ use std::{collections::HashMap, fs, usize};
 use num::integer::lcm;
 
 fn main() {
-    let input: String = fs::read_to_string("../input.txt").unwrap();
+    let input: String = fs::read_to_string("../../inputs/input-08.txt").unwrap();
     let path_finder = PathFinder::from_str(&input);
     let path_lenght = path_finder.get_path_len_fast();
     println!("lenght: {}", path_lenght);

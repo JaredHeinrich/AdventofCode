@@ -1,7 +1,7 @@
 use std::{char, fs, usize};
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-10.txt").unwrap();
     let grid = Grid::from_str(&input);
     let length = grid.count_path_length();
     println!("result: {}", length.div_ceil(2));

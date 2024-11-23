@@ -2,7 +2,7 @@ use core::f32;
 use std::{fs, ops::Div, u32};
 
 fn main() {
-    let input: String = fs::read_to_string("../input.txt").unwrap();
+    let input: String = fs::read_to_string("../../inputs/input-06.txt").unwrap();
     let races: Vec<Vec<u32>> = input
         .lines()
         .map(|line| line
@@ -18,7 +18,7 @@ fn main() {
     println!("result: {}", one(&races));
 }
 
-fn one(races: &Vec<u32>) -> u32{
+fn one(races: &Vec<Vec<u32>>) -> u32{
     let number_races = races[0].len();
     let mut result = 1;
     for i in 0..number_races {

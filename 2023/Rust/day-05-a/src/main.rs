@@ -3,7 +3,7 @@ use std::{fs, u64};
 type Map = Vec<(u64,u64,u64)>;
 
 fn main() {
-    let input: String = fs::read_to_string("../input.txt").unwrap();
+    let input: String = fs::read_to_string("../../inputs/input-05.txt").unwrap();
     let input: Vec<&str> = input.split("\n\n").collect();
     let seeds_str: &str = input[0];
     let map_strs: Vec<&str> = input[1..input.len()].to_vec();

@@ -1,7 +1,7 @@
 use std::{collections::HashMap, fs, u32, u8};
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-07.txt").unwrap();
     let mut hands: Vec<Hand> = input.lines().map(|line| {
         let mut split = line.split(" ");
         let cards: Deck = split.next().unwrap().chars().map(|c| Card::from_char(c).unwrap()).collect::<Vec<Card>>().try_into().unwrap();

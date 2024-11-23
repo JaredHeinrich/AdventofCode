@@ -4,7 +4,7 @@ fn main() {
     max_values.insert("red",12);
     max_values.insert("blue",14);
     max_values.insert("green",13);
-    let input = match fs::read_to_string("../input.txt") {
+    let input = match fs::read_to_string("../../inputs/input-02.txt") {
         Ok(v) => v,
         Err(_) => {
             println!("fehler beim lesen");

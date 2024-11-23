@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-09.txt").unwrap();
     let input: Vec<Vec<i32>> = Vec::from_str(&input);
     let result: i32 = input.into_iter().map(|row| calculate_prediction(row)).collect::<Vec<i32>>().iter().sum();
     println!("{result}")

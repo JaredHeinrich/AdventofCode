@@ -1,6 +1,6 @@
 use std::fs;
 fn main() {
-    let input = match fs::read_to_string("../input.txt") {
+    let input = match fs::read_to_string("../../inputs/input-01.txt") {
         Ok(value) => value,
         Err(_) => String::from("error"),
     };

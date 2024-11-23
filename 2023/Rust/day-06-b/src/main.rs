@@ -1,7 +1,7 @@
 use std::{fs, ops::Div};
 
 fn main() {
-    let input: String = fs::read_to_string("../input.txt").unwrap();
+    let input: String = fs::read_to_string("../../inputs/input-06.txt").unwrap();
     let races: Vec<u64> = input
         .lines()
         .map(|line| line

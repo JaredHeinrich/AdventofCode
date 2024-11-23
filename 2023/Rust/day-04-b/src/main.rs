@@ -1,7 +1,7 @@
 use std::{collections::HashSet, fs, u32, usize};
 
 fn main() {
-    let input = fs::read_to_string("../input.txt").unwrap();
+    let input = fs::read_to_string("../../inputs/input-04.txt").unwrap();
     let mut cards: Vec<(u32, u32, usize)> = input.lines().map(|card|{
         let card: &str = card.split(": ").nth(1).unwrap();
         let card: Vec<&str> = card.split("|").collect();

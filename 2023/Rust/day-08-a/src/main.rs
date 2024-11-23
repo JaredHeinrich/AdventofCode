@@ -5,7 +5,7 @@ fn main() {
     let end_node_id = ['Z','Z','Z'];
     let instructions: Vec<Direction>;
     let graph: Graph;
-    let input: String = fs::read_to_string("../input.txt").unwrap();
+    let input: String = fs::read_to_string("../../inputs/input-08.txt").unwrap();
     let mut input_lines = input.lines();
     instructions = input_lines.next().unwrap().chars().map(|c| Direction::from_char(c).unwrap()).collect();
     input_lines.next();
