@@ -1,6 +1,4 @@
 **/target/
-main
-main.hi
-main.o
 input*
 testinput*
+**/dist-newstyle/*
