@@ -1,4 +1,5 @@
-import Data.List (sort)
+import Data.List (sortBy)
+import qualified Data.Ord
 parse :: String -> [[Int]]
 parse = map (map read) . splitAtEmptyLine . lines
 
@@ -9,7 +10,7 @@ splitAtEmptyLine xs = first : splitAtEmptyLine (drop 1 rest)
     (first, rest) = break null xs
 
 solve :: [[Int]] -> Int
-solve = sum . take 3 . sort . map sum
+solve = sum . take 3 . sortBy (Data.Ord.comparing Data.Ord.Down) . map sum
 
 main :: IO ()
 main = do
