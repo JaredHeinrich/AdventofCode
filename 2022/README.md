@@ -2,7 +2,7 @@
 - [x] [Day 1b](https://adventofcode.com/2022/day/1): [Haskell](Haskell/day-01-b)
 - [x] [Day 2a](https://adventofcode.com/2022/day/2): [Haskell](Haskell/day-02-a)
 - [x] [Day 2b](https://adventofcode.com/2022/day/2): [Haskell](Haskell/day-02-b)
-- [ ] [Day 3a](https://adventofcode.com/2022/day/3):
+- [x] [Day 3a](https://adventofcode.com/2022/day/3): [Haskell](Haskell/day-03-a)
 - [ ] [Day 3b](https://adventofcode.com/2022/day/3):
 - [ ] [Day 4a](https://adventofcode.com/2022/day/4):
 - [ ] [Day 4b](https://adventofcode.com/2022/day/4):
