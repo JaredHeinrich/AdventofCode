@@ -1,0 +1,14 @@
+cabal-version:      3.0
+name:               day05-a
+version:            0.1.0.0
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable day05-a
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base ^>=4.17.2.1
+    hs-source-dirs:   src
+    default-language: GHC2021

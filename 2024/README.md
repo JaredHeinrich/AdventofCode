@@ -4,10 +4,10 @@
 - [x] [Day 2b](https://adventofcode.com/2024/day/2): [Haskell](Haskell/day-02-b)
 - [x] [Day 3a](https://adventofcode.com/2024/day/3): [Haskell](Haskell/day-03-a)
 - [x] [Day 3b](https://adventofcode.com/2024/day/3): [Haskell](Haskell/day-03-b)
-- [ ] [Day 4a](https://adventofcode.com/2024/day/4):
-- [ ] [Day 4b](https://adventofcode.com/2024/day/4):
-- [ ] [Day 5a](https://adventofcode.com/2024/day/5):
-- [ ] [Day 5b](https://adventofcode.com/2024/day/5):
+- [x] [Day 4a](https://adventofcode.com/2024/day/4): [Haskell](Haskell/day-04-a)
+- [x] [Day 4b](https://adventofcode.com/2024/day/4): [Haskell](Haskell/day-04-b)
+- [x] [Day 5a](https://adventofcode.com/2024/day/5): [Haskell](Haskell/day-05-a)
+- [x] [Day 5b](https://adventofcode.com/2024/day/5): [Rust](Rust/day-05-b)
 - [ ] [Day 6a](https://adventofcode.com/2024/day/6):
 - [ ] [Day 6b](https://adventofcode.com/2024/day/6):
 - [ ] [Day 7a](https://adventofcode.com/2024/day/7):
