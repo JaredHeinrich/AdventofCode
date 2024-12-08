@@ -10,8 +10,8 @@
 - [x] [Day 5b](https://adventofcode.com/2024/day/5): [Rust](Rust/day-05-b)
 - [x] [Day 6a](https://adventofcode.com/2024/day/6): [Rust](Rust/day-06-a)
 - [x] [Day 6b](https://adventofcode.com/2024/day/6): [Rust](Rust/day-06-b)
-- [ ] [Day 7a](https://adventofcode.com/2024/day/7):
-- [ ] [Day 7b](https://adventofcode.com/2024/day/7):
+- [x] [Day 7a](https://adventofcode.com/2024/day/7): [Rust](Rust/day-07-a)
+- [x] [Day 7b](https://adventofcode.com/2024/day/7): [Rust](Rust/day-07-b)
 - [ ] [Day 8a](https://adventofcode.com/2024/day/8):
 - [ ] [Day 8b](https://adventofcode.com/2024/day/8):
 - [ ] [Day 9a](https://adventofcode.com/2024/day/9):
